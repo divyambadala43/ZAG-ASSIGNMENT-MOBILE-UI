@@ -1,0 +1,20 @@
+.productContainer {
+  width: 161px;
+  height: 222px;
+}
+
+.productName {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.32px;
+}
+
+.productPrice {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.24px;
+}
