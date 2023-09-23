@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Product 1",
-    "price": 19.99,
+    "price": 1190,
     "description": "Description for Product 1dhjgvflksdHNidsahgfidnaoifhwevknsdjighewoivnaeoIHFGOIEQHNVODIAHGOIWENVOIWEHFGIOENVOIWEHGJ VJUEGHFOIEQNFIOQWEHFGJKEWNFGOIH",
     "sizes": ["S", "M", "L", "XL"],
     "imagePath": "../assets/image1.png",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Product 2",
-    "price": 29.99,
+    "price": 1399,
     "description": "Description for Product 2",
     "sizes": ["S", "M", "L", "XL"],
     "imagePath": "../assets/image2.png",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Product 3",
-    "price": 39.99,
+    "price": 1200,
     "description": "Description for Product 3",
     "sizes": ["S", "M", "L", "XL"],
     "imagePath": "../assets/image3.png",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Product 4",
-    "price": 19.99,
+    "price": 1650,
     "description": "Description for Product 1",
     "sizes": ["S", "M", "L", "XL"],
     "imagePath": "../assets/image4.png",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "name": "Product 5",
-    "price": 29.99,
+    "price": 1500,
     "description": "Description for Product 2",
     "sizes": ["S", "M", "L", "XL"],
     "imagePath": "../assets/image5.png",
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Product 6",
-    "price": 39.99,
+    "price": 1249,
     "description": "Description for Product 3",
     "sizes": ["S", "M", "L", "XL"],
     "imagePath": "../assets/image6.png",

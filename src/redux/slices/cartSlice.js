@@ -13,8 +13,6 @@ const cartSlice = createSlice({
       const cartItem = { ...newItem, id: cartItemId };
       const existingItem = state.items.find(
         (item) =>
-          // item.id === newItem.id &&
-          // item.size === newItem.size &&
           item.id === cartItemId
       );
       console.log(state);

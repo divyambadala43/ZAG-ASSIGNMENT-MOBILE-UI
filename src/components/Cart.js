@@ -8,6 +8,13 @@ import Total from "./Total";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
+  const shippingFee = 80;
+  const subTotal = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
+  const totalPrice = subTotal + shippingFee;
+  console.log(totalPrice);
   if (cartItems.length === 0) {
     return (
       <div className={styles.emptyCartContainer}>
@@ -44,7 +51,11 @@ function Cart() {
           <div>Voucher Code</div>
         </div>
       </div>
-      <Total />
+      <Total
+        subTotal={subTotal}
+        shippingFee={shippingFee}
+        totalPrice={totalPrice}
+      />
     </>
   );
 }
