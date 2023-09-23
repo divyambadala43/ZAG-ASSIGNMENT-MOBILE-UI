@@ -14,6 +14,7 @@ const CartItem = ({
   imagePath,
   imageName,
   quantity,
+  size,
 }) => {
   const dispatch = useDispatch();
   const handleRemoveItem = (itemId) => {
@@ -38,7 +39,7 @@ const CartItem = ({
       <div className={styles.itemInfo}>
         <div className={styles.info}>
           <div className={styles.itemName}>{itemName}</div>
-          <div className={styles.itemSize}>L</div>
+          <div className={styles.itemSize}>{size}</div>
         </div>
         <div className={styles.itemPrice}>INR {itemPrice}</div>
       </div>

@@ -20,14 +20,14 @@ function Cart() {
   }
   return (
     <>
-      {cartItems.map((item) => (
+      {cartItems.map((item, index) => (
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             marginTop: "18px",
           }}
-          key={item.id}>
+          key={index}>
           <CartItem
             id={item.id}
             imagePath={item.imagePath}
@@ -35,6 +35,7 @@ function Cart() {
             itemName={item.name}
             itemPrice={item.price}
             quantity={item.quantity}
+            size={item.size}
           />
         </div>
       ))}
