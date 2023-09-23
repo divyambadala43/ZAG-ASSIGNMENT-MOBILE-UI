@@ -1,33 +1,57 @@
+// Cart.js
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { removeProductFromCart, clearCart } from "../redux/slices/cartSlice";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  removeProductFromCart,
+  decreaseQuantity,
+  increaseQuantity,
+} from "../redux/slices/cartSlice";
+import CartItem from "./CartItem";
 
-const Cart = () => {
+function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
 
-  const handleRemoveFromCart = (item) => {
-    dispatch(removeProductFromCart(item));
+  const handleRemoveItem = (itemId) => {
+    dispatch(removeProductFromCart(itemId));
+  };
+  const handleDecreaseQuantity = (itemId, quantity) => {
+    if (quantity === 1) {
+      dispatch(removeProductFromCart(itemId));
+    } else {
+      dispatch(decreaseQuantity(itemId));
+    }
   };
 
-  const handleClearCart = () => {
-    dispatch(clearCart());
+  const handleIncreaseQuantity = (itemId) => {
+    dispatch(increaseQuantity(itemId));
   };
 
   return (
-    <div>
-      <h2>Shopping Cart</h2>
-      <ul>
-        {cartItems.map((item) => (
-          <li key={item.id}>
-            {item.name} -
-            <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
-          </li>
-        ))}
-      </ul>
-      <button onClick={handleClearCart}>Clear Cart</button>
-    </div>
+    <>
+      {cartItems.map((item) => (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "18px",
+          }}
+          key={item.id}>
+          <CartItem
+            id={item.id}
+            imagePath={item.imagePath}
+            imageName={item.imageName}
+            itemName={item.name}
+            itemPrice={item.price}
+            quantity={item.quantity}
+            handleRemoveItem={handleRemoveItem}
+            handleDecreaseQuantity={handleDecreaseQuantity}
+            handleIncreaseQuantity={handleIncreaseQuantity}
+          />
+        </div>
+      ))}
+    </>
   );
-};
+}
 
 export default Cart;

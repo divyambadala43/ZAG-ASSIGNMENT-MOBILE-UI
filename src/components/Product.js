@@ -1,12 +1,12 @@
 import React from "react";
-import image1 from "../assets/image1.png";
+// import image1 from "../assets/image1.png";
 import "../styles/styles.css";
 
-const Product = ({ name, price }) => {
+const Product = ({ name, price, imagePath, imageName }) => {
   return (
     <>
       <div>
-        <img src={image1} alt="" />
+        <img src={imagePath} alt={imageName} />
       </div>
       <div>
         <div className="productName">{name}</div>

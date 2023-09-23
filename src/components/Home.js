@@ -15,6 +15,8 @@ const Home = () => {
                 key={product.id}
                 name={product.name}
                 price={product.price}
+                imagePath={product.imagePath}
+                imageName={product.imageName}
               />
             </div>
           </Link>
