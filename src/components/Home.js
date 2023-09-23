@@ -4,15 +4,33 @@ import SearchBar from "./SearchBar";
 import productsData from "../data2.json";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import styles from "../styles/Home.module.css";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
-      <div>
+      <SearchBar />
+      <div className={styles.categoriesContainer}>
+        <div className={styles.categorySelected}>
+          <div>All</div>
+        </div>
+        <div className={styles.category}>
+          <div>Men</div>
+        </div>
+        <div className={styles.category}>
+          <div>Women</div>
+        </div>
+        <div className={styles.category}>
+          <div>Kids</div>
+        </div>
+      </div>
+      <div className={styles.productsContainer}>
         {productsData.map((product) => (
-          <Link to={`/details/${product.id}`}>
-            <div key={product.id}>
+          <div className={styles.productContainer} key={product.id}>
+            <Link
+              to={`/details/${product.id}`}
+              style={{ textDecoration: "none" }}>
               <Product
                 key={product.id}
                 name={product.name}
@@ -20,11 +38,11 @@ const Home = () => {
                 imagePath={product.imagePath}
                 imageName={product.imageName}
               />
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 

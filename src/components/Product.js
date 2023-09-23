@@ -1,16 +1,15 @@
 import React from "react";
-// import image1 from "../assets/image1.png";
-import "../styles/styles.css";
+import styles from "../styles/Product.module.css";
 
 const Product = ({ name, price, imagePath, imageName }) => {
   return (
     <>
-      <div>
+      <div className={styles.imageContainer}>
         <img src={imagePath} alt={imageName} />
       </div>
       <div>
-        <div className="productName">{name}</div>
-        <div className="productPrice">{price}</div>
+        <div className={styles.productName}>{name}</div>
+        <div className={styles.productPrice}>INR {price}</div>
       </div>
     </>
   );

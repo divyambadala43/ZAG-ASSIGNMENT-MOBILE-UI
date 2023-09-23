@@ -1,0 +1,49 @@
+.categoriesContainer {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  margin: 15px 10px 0 10px;
+}
+
+.category {
+  display: flex;
+  width: 65px;
+  height: 38px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #f2f2f2;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  margin-right: 10px;
+}
+.categorySelected {
+  display: flex;
+  width: 65px;
+  height: 38px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.32px;
+  margin-right: 10px;
+}
+
+.productContainer {
+  width: 163px;
+  height: 222px;
+}
+
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 25px;
+}
