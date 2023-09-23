@@ -1,0 +1,21 @@
+.footerContainer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconTitle {
+  color: #8d7b7b;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.24px;
+}
