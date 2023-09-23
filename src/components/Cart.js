@@ -6,6 +6,7 @@ import styles from "../styles/Cart.module.css";
 import { Link } from "react-router-dom";
 import Total from "./Total";
 import Header from "./Header";
+import CheckoutButton from "./CheckoutButton";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -61,6 +62,7 @@ function Cart() {
         shippingFee={shippingFee}
         totalPrice={totalPrice}
       />
+      <CheckoutButton />
     </>
   );
 }

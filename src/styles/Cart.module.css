@@ -85,6 +85,29 @@
   text-align: right;
   font-size: 16px;
   font-weight: 600;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: -0.32px;
+}
+
+.checkoutButtonContainer {
+  display: flex;
+  width: 390px;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+.checkoutButton {
+  display: flex;
+  width: 100px;
+  padding: 15px 92px;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
 }
