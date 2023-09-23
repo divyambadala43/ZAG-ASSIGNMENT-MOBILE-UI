@@ -3,10 +3,12 @@ import Product from "./Product";
 import SearchBar from "./SearchBar";
 import productsData from "../data2.json";
 import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <div>
+      <Header />
       <div>
         {productsData.map((product) => (
           <Link to={`/details/${product.id}`}>

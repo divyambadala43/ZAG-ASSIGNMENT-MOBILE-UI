@@ -5,6 +5,7 @@ import CartItem from "./CartItem";
 import styles from "../styles/Cart.module.css";
 import { Link } from "react-router-dom";
 import Total from "./Total";
+import Header from "./Header";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -17,16 +18,20 @@ function Cart() {
   console.log(totalPrice);
   if (cartItems.length === 0) {
     return (
-      <div className={styles.emptyCartContainer}>
-        <p>No items in cart.</p>
-        <Link to="/">
-          <button className={styles.addProductsButton}>Add Products</button>
-        </Link>
-      </div>
+      <>
+        <Header />
+        <div className={styles.emptyCartContainer}>
+          <p>No items in cart.</p>
+          <Link to="/">
+            <button className={styles.addProductsButton}>Add Products</button>
+          </Link>
+        </div>
+      </>
     );
   }
   return (
     <>
+      <Header />
       {cartItems.map((item, index) => (
         <div
           style={{

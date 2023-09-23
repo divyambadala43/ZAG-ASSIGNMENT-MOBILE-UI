@@ -81,6 +81,10 @@
   margin-right: 10px;
 }
 
+.selectedSize {
+  border: #000 1px solid;
+}
+
 .productSummary {
   display: flex;
   justify-content: space-between;
