@@ -4,41 +4,53 @@
     "name": "Regular Fit Slogan",
     "description": "The name says it all, the right size slghtly snugs the body leaving enough room for comfort in the sleeves and waits.",
     "price": 19.99,
-    "sizes": ["Small", "Medium", "Large"]
+    "sizes": ["Small", "Medium", "Large"],
+    "imagePath": "../assets/image1.png",
+    "imageName": "Regular Fit Slogan"
   },
   {
     "id": 2,
     "name": "Regular Fit Slogan",
     "description": "The name says it all, the right size slghtly snugs the body leaving enough room for comfort in the sleeves and waits.",
     "price": 19.99,
-    "sizes": ["Small", "Medium", "Large"]
+    "sizes": ["Small", "Medium", "Large"],
+    "imagePath": "../assets/image2.png",
+    "imageName": "Regular Fit Slogan"
   },
   {
     "id": 3,
     "name": "Regular Fit Slogan",
     "description": "The name says it all, the right size slghtly snugs the body leaving enough room for comfort in the sleeves and waits.",
     "price": 19.99,
-    "sizes": ["Small", "Medium", "Large"]
+    "sizes": ["Small", "Medium", "Large"],
+    "imagePath": "../assets/image3.png",
+    "imageName": "Regular Fit Slogan"
   },
   {
     "id": 4,
     "name": "Regular Fit Slogan",
     "description": "The name says it all, the right size slghtly snugs the body leaving enough room for comfort in the sleeves and waits.",
     "price": 19.99,
-    "sizes": ["Small", "Medium", "Large"]
+    "sizes": ["Small", "Medium", "Large"],
+    "imagePath": "../assets/image4.png",
+    "imageName": "Regular Fit Slogan"
   },
   {
     "id": 5,
     "name": "Regular Fit Slogan",
     "description": "The name says it all, the right size slghtly snugs the body leaving enough room for comfort in the sleeves and waits.",
     "price": 19.99,
-    "sizes": ["Small", "Medium", "Large"]
+    "sizes": ["Small", "Medium", "Large"],
+    "imagePath": "../assets/image5.png",
+    "imageName": "Regular Fit Slogan"
   },
   {
     "id": 6,
     "name": "Regular Fit Slogan",
     "description": "The name says it all, the right size slghtly snugs the body leaving enough room for comfort in the sleeves and waits.",
     "price": 19.99,
-    "sizes": ["Small", "Medium", "Large"]
+    "sizes": ["Small", "Medium", "Large"],
+    "imagePath": "../assets/image6.png",
+    "imageName": "Regular Fit Slogan"
   }
 ]
