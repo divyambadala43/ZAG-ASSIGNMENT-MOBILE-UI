@@ -1,11 +1,11 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import {
   removeProductFromCart,
   decreaseQuantity,
   increaseQuantity,
 } from "../redux/slices/cartSlice";
-import styles from "../styles/Cart.module.css";
-import { useDispatch } from "react-redux";
+import styles from "../styles/CartItem.module.css";
 
 const CartItem = ({
   id,

@@ -1,32 +1,23 @@
 // Cart.js
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  removeProductFromCart,
-  decreaseQuantity,
-  increaseQuantity,
-} from "../redux/slices/cartSlice";
+import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
+import styles from "../styles/Cart.module.css";
+import { Link } from "react-router-dom";
+import Total from "./Total";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
-  const dispatch = useDispatch();
-
-  const handleRemoveItem = (itemId) => {
-    dispatch(removeProductFromCart(itemId));
-  };
-  const handleDecreaseQuantity = (itemId, quantity) => {
-    if (quantity === 1) {
-      dispatch(removeProductFromCart(itemId));
-    } else {
-      dispatch(decreaseQuantity(itemId));
-    }
-  };
-
-  const handleIncreaseQuantity = (itemId) => {
-    dispatch(increaseQuantity(itemId));
-  };
-
+  if (cartItems.length === 0) {
+    return (
+      <div className={styles.emptyCartContainer}>
+        <p>No items in cart.</p>
+        <Link to="/">
+          <button className={styles.addProductsButton}>Add Products</button>
+        </Link>
+      </div>
+    );
+  }
   return (
     <>
       {cartItems.map((item) => (
@@ -44,12 +35,15 @@ function Cart() {
             itemName={item.name}
             itemPrice={item.price}
             quantity={item.quantity}
-            handleRemoveItem={handleRemoveItem}
-            handleDecreaseQuantity={handleDecreaseQuantity}
-            handleIncreaseQuantity={handleIncreaseQuantity}
           />
         </div>
       ))}
+      <div className={styles.voucherConatiner}>
+        <div className={styles.voucherField}>
+          <div>Voucher Code</div>
+        </div>
+      </div>
+      <Total />
     </>
   );
 }
