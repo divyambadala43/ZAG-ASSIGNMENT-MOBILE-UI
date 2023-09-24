@@ -1,0 +1,113 @@
+.emptyCartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.voucherConatiner {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.voucherField {
+  display: inline-flex;
+  height: 53px;
+  width: 341px;
+  align-items: center;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  justify-content: flex-start;
+}
+
+.voucherField div {
+  margin-left: 22px;
+}
+
+.priceInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addProductsButton {
+  display: flex;
+  width: 341px;
+  padding: 17px 92px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+}
+
+.totalContainer {
+  margin: 0 30px;
+}
+
+.amountType {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.price {
+  color: #000;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.totalPriceContainer {
+  margin: 0 30px;
+}
+
+.totalPriceInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalHeading {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.totalPrice {
+  color: #000;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.checkoutButtonContainer {
+  display: flex;
+  width: 390px;
+  justify-content: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+}
+
+.checkoutButton {
+  display: flex;
+  width: 100px;
+  padding: 15px 92px;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 20px 0;
+}
