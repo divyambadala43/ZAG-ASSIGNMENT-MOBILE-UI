@@ -95,14 +95,13 @@
   background: #fff;
   position: sticky;
   bottom: 0;
-  left: 0;
-  right: 0;
   z-index: 1;
 }
 
 .productPriceConatiner {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
 }
 
 .addToCartButton {
@@ -116,4 +115,5 @@
   color: #fff;
   font-size: 16px;
   font-weight: 400;
+  margin-right: 20px;
 }

@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Product 1",
     "price": 1190,
-    "description": "Description for Product 1dhjgvflksdHNidsahgfidnaoifhwevknsdjighewoivnaeoIHFGOIEQHNVODIAHGOIWENVOIWEHFGIOENVOIWEHGJ VJUEGHFOIEQNFIOQWEHFGJKEWNFGOIH",
+    "description": "Description for Product 1",
     "sizes": ["S", "M", "L", "XL"],
     "imagePath": "../assets/image1.png",
     "imageName": "Regular Fit Slogan"

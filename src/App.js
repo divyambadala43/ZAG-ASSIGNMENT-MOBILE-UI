@@ -5,7 +5,7 @@ import Cart from "./components/Cart";
 
 function App() {
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="details/:id" element={<ProductDetails />} />
