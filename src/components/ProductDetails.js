@@ -7,24 +7,27 @@ import styles from "../styles/ProductDetails.module.css";
 import Header from "./Header";
 
 function ProductDetails() {
-  // const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const { id } = useParams();
   const [selectedSize, setSelectedSize] = useState("");
   const [showSizeError, setShowSizeError] = useState(false);
   const selectedButtonRef = useRef(null);
 
+  // Find the product with the matching id from the URL
   const product = productsData.find((p) => p.id === parseInt(id, 10));
 
+  // If the product doesn't exist, display a message
   if (!product) {
     return <div>Product not found</div>;
   }
 
+  // Function to handle size selection
   const sizeSelectionHandler = (size) => {
     setSelectedSize(size);
     selectedButtonRef.current = size;
   };
 
+  // Function to handle adding the product to the cart
   const addToCartHandler = () => {
     if (!selectedSize) {
       setShowSizeError(true);
@@ -45,8 +48,10 @@ function ProductDetails() {
 
   return (
     <>
+      {/* Display the header */}
       <Header />
       <div className={styles.productDetailsContainer}>
+        {/* Display product image */}
         <div className={styles.productImageContainer}>
           <img
             className={styles.productImage}
@@ -54,8 +59,11 @@ function ProductDetails() {
             alt={product.imageName}
           />
         </div>
+        {/* Display product name */}
         <div className={styles.productName}>{product.name}</div>
+        {/* Display product ratings */}
         <div className={styles.ratingsContainer}>
+          {/* Display ratings icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -70,8 +78,10 @@ function ProductDetails() {
           <span className={styles.productRating}>4.5/5</span>
           <span className={styles.productReviews}>(45 reviews)</span>
         </div>
+        {/* Display product description */}
         <div className={styles.productDescription}>{product.description}</div>
         <div>
+          {/* Display size selection */}
           <div className={styles.sizeHeading}>Choose Size</div>
           <div className={styles.sizesContainer}>
             {product.sizes.map((size) => (
@@ -88,12 +98,14 @@ function ProductDetails() {
             ))}
           </div>
         </div>
+        {/* Display product price and add to cart button */}
         <div className={styles.productSummary}>
           <div className={styles.productPriceConatiner}>
             <div>PRICE</div>
             <div>{product.price}</div>
           </div>
           <div>
+            {/* Link to the cart and add to cart button */}
             <Link to="/cart">
               <button
                 onClick={addToCartHandler}

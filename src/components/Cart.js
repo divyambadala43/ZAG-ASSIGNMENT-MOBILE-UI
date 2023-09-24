@@ -9,18 +9,23 @@ import Header from "./Header";
 import CheckoutButton from "./CheckoutButton";
 
 function Cart() {
+  // Get cart items from Redux store
   const cartItems = useSelector((state) => state.cart.items);
+
+  // Shipping fee and calculation of subTotal and totalPrice
   const shippingFee = 80;
   const subTotal = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
     0
   );
   const totalPrice = subTotal + shippingFee;
-  console.log(totalPrice);
+
+  // Check if the cart is empty
   if (cartItems.length === 0) {
     return (
       <>
         <Header />
+        {/* Display a message for an empty cart */}
         <div className={styles.emptyCartContainer}>
           <p>No items in cart.</p>
           <Link to="/">
@@ -30,9 +35,11 @@ function Cart() {
       </>
     );
   }
+
   return (
     <>
       <Header />
+      {/* Display cart items */}
       {cartItems.map((item, index) => (
         <div
           style={{
@@ -52,11 +59,15 @@ function Cart() {
           />
         </div>
       ))}
+
+      {/* Voucher code input field */}
       <div className={styles.voucherConatiner}>
         <div className={styles.voucherField}>
           <div>Voucher Code</div>
         </div>
       </div>
+
+      {/* Display total and checkout button */}
       <Total
         subTotal={subTotal}
         shippingFee={shippingFee}

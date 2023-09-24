@@ -1,4 +1,3 @@
-// Header.js
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/Header.module.css";
@@ -7,6 +6,7 @@ function Header() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Function to navigate back in the browser history
   const goBack = () => {
     navigate(-1);
   };
@@ -14,6 +14,7 @@ function Header() {
   let headerText = "";
   let showBackButton = false;
 
+  // Determine the header text and whether to show the back button based on the current route
   if (location.pathname.startsWith("/details/")) {
     headerText = "Details";
     showBackButton = true;
@@ -28,6 +29,7 @@ function Header() {
     <div className={styles.headerConatiner}>
       {showBackButton && (
         <div className={styles.backButton} onClick={goBack}>
+          {/* Back button icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -46,6 +48,7 @@ function Header() {
       )}
       <h1 className={styles.headerText}>{headerText}</h1>
       <div className={styles.notificationIcon}>
+        {/* Notification icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"

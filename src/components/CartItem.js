@@ -17,9 +17,13 @@ const CartItem = ({
   size,
 }) => {
   const dispatch = useDispatch();
+
+  // Handle removing an item from the cart
   const handleRemoveItem = (itemId) => {
     dispatch(removeProductFromCart(itemId));
   };
+
+  // Handle decreasing the quantity of an item in the cart
   const handleDecreaseQuantity = (itemId, quantity) => {
     if (quantity === 1) {
       dispatch(removeProductFromCart(itemId));
@@ -28,9 +32,11 @@ const CartItem = ({
     }
   };
 
+  // Handle increasing the quantity of an item in the cart
   const handleIncreaseQuantity = (itemId) => {
     dispatch(increaseQuantity(itemId));
   };
+
   return (
     <div className={styles.itemContainer}>
       <div className={styles.itemImage}>
@@ -45,6 +51,7 @@ const CartItem = ({
       </div>
       <div className={styles.buttons}>
         <div onClick={() => handleRemoveItem(id)} className={styles.deleteIcon}>
+          {/* Delete icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -61,6 +68,7 @@ const CartItem = ({
           </svg>
         </div>
         <div className={styles.quantityContainer}>
+          {/* Buttons for increasing and decreasing quantity */}
           <button
             onClick={() => handleIncreaseQuantity(id)}
             className={styles.button}>
